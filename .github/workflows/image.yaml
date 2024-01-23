@@ -19,6 +19,7 @@ jobs:
         run: |
           curl -L -o chained-ci-example \
           "https://github.com/knelasevero/chained-ci-example/releases/download/${{ github.event.client_payload.tag_name }}/chained-ci-example"
+          chmod +x chained-ci-example
           ls
         
       - name: Log in to the Container registry
