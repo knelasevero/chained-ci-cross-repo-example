@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: chained-ci-example
-        image: ghcr.io/knelasevero/chained-ci-cross-repo-example:0.0.1-rc4
+        image: ghcr.io/knelasevero/chained-ci-cross-repo-example:0.0.1-rc8
         ports:
         - containerPort: 8080
