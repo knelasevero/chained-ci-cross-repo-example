@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chained-ci-example-deployment
+  labels:
+    app: chained-ci-example
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chained-ci-example
+  template:
+    metadata:
+      labels:
+        app: chained-ci-example
+    spec:
+      containers:
+      - name: chained-ci-example
+        image: ghcr.io/knelasevero/chained-ci-cross-repo-example:0.0.1-rc4
+        ports:
+        - containerPort: 8080
